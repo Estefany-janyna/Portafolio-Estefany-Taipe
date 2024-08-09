@@ -1,0 +1,19 @@
+<section id="skills" class="relative overflow-hidden flex items-center justify-center bg-scale-950 pt-6 pb-6 px-5">
+  <div class="text-center">
+    <h2 class="text-3xl text-white font-bold mb-14 flex items-center justify-center">
+      <svg class="w-8 h-8 mr-2 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 2a1 1 0 00-.894.553L1 15h18l-8.106-12.447A1 1 0 0010 2zm0 4.618L14.382 12H5.618L10 6.618zM5 13a1 1 0 100 2 1 1 0 000-2zm10 0a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path>
+      </svg>
+      Habilidades Técnicas
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-5 gap-1 justify-center w-full">
+      <div *ngFor="let element of elements" class="flex flex-col items-center text-center p-4 rounded-lg shadow-lg border-2 border-blue-500 bg-scale-950">
+        <img [src]="element.icon" [alt]="element.title" class="w-12 h-12 mb-2 object-contain">
+        <span class="text-xs font-bold text-blue-700">{{ element.title }}</span>
+        <div class="flex space-x-2 mt-2">
+          <img *ngFor="let item of element.items" [src]="item.src" [alt]="item.alt" class="w-16 h-16 md:w-7 md:h-7 ">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
