@@ -1,18 +1,19 @@
-<section id="proyectos" class="relative overflow-hidden bg-scale-950 pt-6 pb-6 px-5">
-  <h2 class="text-3xl text-white font-bold mb-14 flex items-center justify-center">
+<section id="experience" class="relative overflow-hidden bg-scale-950 pb-6">
+  <h2 class="text-3xl text-white font-bold mb-10 flex items-center justify-center" data-aos="fade-up">
     <svg class="w-8 h-8 mr-2 text-blue-700" fill="currentColor" viewBox="0 0 20 20">
       <path d="M4 2a1 1 0 00-1 1v14a1 1 0 001.447.894L10 15.618l6.553 3.276A1 1 0 0018 17V3a1 1 0 00-1-1H4zm1 2h10v10.382l-5-2.5-5 2.5V4z"></path>
     </svg>
     Proyectos
   </h2>
-  <div class="flex flex-col gap-y-20">
-    <article *ngFor="let project of PROJECTS" class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-10 md:space-y-0">
+  <div class="flex flex-col gap-y-14">
+    <article *ngFor="let project of PROJECTS" class="flex flex-col md:flex-row md:gap-10 group" 
+    [attr.data-aos]="project.title === 'Girl of the Future' ? 'zoom-in-left' : 'zoom-in-right'">
       <div class="w-full md:w-1/2">
-        <div class="relative flex flex-col items-start gap-8 transition duration-500 ease-in-out transform md:group-hover:-translate-y-1">
+        <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform md:group-hover:-translate-y-1">
           <img 
             [src]="project.image" 
             [alt]="project.title" 
-            class="object-cover h-48 w-96 transition duration-500 md:scale-110 md:group-hover:scale-105 rounded-lg cursor-pointer" 
+            class="object-cover h-48 w-96 transition duration-500 md:scale-105 md:group-hover:scale-100 rounded-lg cursor-pointer" 
             (click)="openModal(project)"
             loading="lazy">
         </div>

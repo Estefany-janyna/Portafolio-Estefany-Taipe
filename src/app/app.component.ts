@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -8,6 +8,7 @@ import { ExperienceComponent } from "./components/experience/experience.componen
 import { SkillsComponent } from './components/skills/skills.component';
 import { AdditionalInfoComponent } from './components/additional-info/additional-info.component';
 import { RouterModule } from '@angular/router';
+import AOS from 'aos';  // Importar AOS
 
 @Component({
   selector: 'app-root',
@@ -26,4 +27,10 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   title = 'portafolio';
+
+  ngAfterViewInit(): void {
+    if (typeof document !== 'undefined') {
+      AOS.init();
+    }
+  }
 }

@@ -56,12 +56,22 @@ export class ExperienceComponent {
       class: "bg-[#003159] text-white",
       icon: "fas fa-leaf",
     },
+    figma: {
+      name: "Figma",
+      class: "bg-[#003159] text-white",
+      icon: "fa-brands fa-figma",
+    },
+    canva: {
+      name: "Canva",
+      class: "bg-[#003159] text-white",
+      icon: "fa-solid fa-c",
+    },
   }
 
   PROJECTS = [
     {
       title: "Girl of the Future",
-      description: "Aplicación móvil para abordar la problematica del bullying en el Perú",
+      description: "Aplicación móvil para abordar la problematica del bullying en el Perú.",
       // link: "https://svgl.vercel.app/",
       github: "https://github.com/Estefany-janyna",
       image: "../../../assets/images/software.jpg",
@@ -69,7 +79,7 @@ export class ExperienceComponent {
     },
     {
       title: "Citas Tec Médicas",
-      description: "Sistema para la reserva de citas médicas",
+      description: "Sistema para la reserva de citas médicas.",
       // link: "https://adventjs.dev",
       github: "https://github.com/Jhoselin19/PROYECTOJMDE.git",
       image: "../../../assets/images/citas.png",
@@ -77,7 +87,7 @@ export class ExperienceComponent {
     },
     {
       title: "CyberSentinel",
-      description: "Aplicación web para mejorar la conciencia de seguridad cibernética",
+      description: "Aplicación web para mejorar la conciencia de seguridad cibernética.",
       // link: "https://adventjs.dev",
       github: "https://github.com/Estefany-janyna/CyberSentinel.git",
       image: "../../../assets/images/IMG1.png",
@@ -85,11 +95,19 @@ export class ExperienceComponent {
     },
     {
       title: "Enseñame",
-      description: "Aplicación web para reforzar el conocimiento de lenguaje de señas peruanas. Un software implementado a una empresa",
+      description: "Aplicación web para reforzar el conocimiento de lenguaje de señas peruanas. Un software implementado a una empresa.",
       // link: "https://adventjs.dev",
       github: "https://github.com/Estefany-janyna/EM-PROYECTO_PRETESIS_FINAL.git",
       image: "../../../assets/images/lara.png",
       tags: [this.TAGS.NODEJS, this.TAGS.Mongodb, this.TAGS.Bootstrap, this.TAGS.ANGULAR],
+    },
+    {
+      title: "Fundación Calma",
+      description: "Diseñadora Web en el área de Marketing, Branding y Comunicaciones. Desarrollo de contenido digital para sensibilización y cultura de paz (720 horas).",
+      // link: "https://adventjs.dev",
+      github: "https://www.figma.com/design/hf5MNo0nvDSBJf2vBJpOYp/Untitled?node-id=0-1&p=f&t=Crsokd43fU1ZICoQ-0",
+      image: "../../../assets/images/suyat.png",
+      tags: [this.TAGS.figma, this.TAGS.canva],
     },
   ]
 

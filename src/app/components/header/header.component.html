@@ -1,30 +1,36 @@
+<header class="absolute inset-x-0 top-0 z-50">
+  <nav class="flex items-center justify-center p-6 lg:px-8 relative">
+    <!-- Menú en pantallas grandes -->
+    <div class="hidden lg:flex lg:gap-x-10 justify-center">
+      <a *ngFor="let item of navItems" (click)="scrollToSection(item.url)"
+        class="text-white hover:text-blue-900 cursor-pointer px-4 py-2 rounded-md">
+        {{ item.title }}
+      </a>
+    </div>
 
-
-
-
-<header class="bg-scale-950 text-white fixed top-0 w-full z-50 px-5">
-  <div class="container flex  items-center justify-between p-6">
-    <!-- Botón de menú en pantallas pequeñas -->
-    <button id="menuButton" (click)="toggleMenu()" class="sm:hidden text-white focus:outline-none absolute top-5 right-10 bg-slate-950 rounded p-3">
-      <svg *ngIf="!isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-      <svg *ngIf="isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    <!-- Botón de menú en pantallas pequeñas (ubicado al final) -->
+    <button type="button" (click)="toggleMenu()" class="lg:hidden p-2 text-slate-500 ml-auto">
+      <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
       </svg>
     </button>
+  </nav>
 
-    <!-- Barra de navegación -->
-    <nav id="menuNav" [ngClass]="{'translate-x-full': !isMenuOpen, 'translate-x-0': isMenuOpen, 'bg-slate-950/95': isMenuOpen}" class="transform fixed top-0 right-0  transition-transform duration-300 ease-in-out sm:static sm:bg-transparent sm:transform-none sm:flex sm:space-x-6 w-full">
-      <button (click)="toggleMenu()" class="absolute top-5 right-10 sm:hidden text-white focus:outline-none bg-slate-950">
-        <svg *ngIf="isMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+  <!-- Menú móvil -->
+  <div *ngIf="isMenuOpen" class="fixed inset-0 z-50 bg-slate-950 p-6 lg:hidden">
+    <div class="flex justify-end items-center">
+      <button type="button" (click)="toggleMenu()" class="p-2 text-gray-400">
+        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>
       </button>
-      <div class="relative flex flex-col h-full sm:flex-row sm:space-x-6 sm:h-auto  sm:bg-slate-950 rounded-full">
-        <!-- Enlaces de navegación -->
-        <a *ngFor="let item of navItems" (click)="scrollToSection(item.url)" class="block py-4 md:py-4 mx-4 md:mx-0 text-white hover:text-blue-900 rounded-md cursor-pointer px-4">{{ item.title }}</a>
-      </div>
+    </div>
+    <nav class="mt-6 flex flex-col gap-4">
+      <a *ngFor="let item of navItems" (click)="scrollToSection(item.url)"
+        class="text-white hover:text-blue-900 cursor-pointer px-4 py-2 rounded-md">
+        {{ item.title }}
+      </a>
     </nav>
   </div>
+
 </header>

@@ -28,8 +28,8 @@ export class SkillsComponent {
       icon: '../../../assets/images/server.png',
       items: [
         // { src: '../../../assets/images/django.png', alt: 'Django' },
-        { src: '../../../assets/images/node-js.png', alt: 'Node.js' },
-        { src: '../../../assets/images/express.png', alt: 'Express' }
+        { src: '../../../assets/images/nodejs.svg', alt: 'Node.js' },
+        { src: '../../../assets/images/expressjs_dark.svg', alt: 'Express' }
       ]
     },
     {
@@ -37,8 +37,8 @@ export class SkillsComponent {
       icon: '../../../assets/images/database.png',
       items: [
         // { src: '../../../assets/images/mysql.png', alt: 'MySQL' },
-        { src: '../../../assets/images/sql.png', alt: 'SQLServer' },
-        { src: '../../../assets/images/mongodb.png', alt: 'MongoDB' }
+        { src: '../../../assets/images/sql-server.svg', alt: 'SQLServer' },
+        { src: '../../../assets/images/mongodb.svg', alt: 'MongoDB' }
       ]
     },
     {

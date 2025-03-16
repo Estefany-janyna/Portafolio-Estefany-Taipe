@@ -47,6 +47,24 @@ export class AdditionalInfoComponent {
       image: "../../../assets/images/excel.png",
       altText: "Imagen del curso de Excel de Open Academy ofrecido por Santander"
     },
+    {
+      title: "Pensando en tu empleabilidad (2024)",
+      description: "Participación en el ciclo de webinars Pensando en tu empleabilidad - 2024.",
+      image: "../../../assets/images/pronabec.png",
+      altText: "Imagen Pensando en tu empleabilidad"
+    },
+    {
+      title: "Curso: Universidad Excel - Básico, Intermedio y Avanzado",
+      description: "Certificación en Excel desde nivel básico hasta avanzado - Udemy.",
+      image: "../../../assets/images/vanzado.png",
+      altText: "Imagen del curso de Excel de Básico, Intermedio y Avanzado"
+    },
+    {
+      title: "Conferencia: Desafía tus límites y sé el protagonista de tu éxito",
+      description: "Capacitación en gestión del tiempo y ahorro previsional - Prima AFP.",
+      image: "../../../assets/images/prima.png",
+      altText: "Imagen de Conferencia: Desafía tus límites "
+    },
     
   ];
 
