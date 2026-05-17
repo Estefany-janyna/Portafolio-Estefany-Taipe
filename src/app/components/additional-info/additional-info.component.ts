@@ -65,6 +65,12 @@ export class AdditionalInfoComponent {
       image: "../../../assets/images/prima.png",
       altText: "Imagen de Conferencia: Desafía tus límites "
     },
+     {
+      title: "NETZUN: SQL(2026)",
+      description: "Certificación sql - NETZUN.",
+      image: "../../../assets/images/netzun.png",
+      altText: "Imagen del curso: sql"
+    },
     
   ];
 
